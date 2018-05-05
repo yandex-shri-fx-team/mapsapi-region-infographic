@@ -6,9 +6,6 @@ module.exports = {
     output: {
         path: __dirname + '/examples'
     },
-    optimization: {
-        minimize: false
-    },
     module: {
         rules: [
             {
@@ -16,6 +13,12 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
+                }
+            },
+            {
+                test: /\.geojson$/,
+                use: {
+                    loader: 'json-loader'
                 }
             },
             {
