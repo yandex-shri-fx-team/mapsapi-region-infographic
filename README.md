@@ -1,4 +1,4 @@
-# Yandex Maps API Region Infographic Module
+# Yandex Maps API Region Map Module
 
 Yandex.Maps API module for data visualization.
 
