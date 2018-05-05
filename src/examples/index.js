@@ -1,4 +1,4 @@
-import './../RegionInfographic/RegionInfographic';
+import './../Regionmap/Regionmap';
 
 ymaps.ready(() => {
     // eslint-disable-next-line no-unused-vars
@@ -11,10 +11,10 @@ ymaps.ready(() => {
         zoomControl: 'small'
     });
 
-    ymaps.modules.require(['RegionInfographic'], (RegionInfographic) => {
+    ymaps.modules.require(['Regionmap'], (Regionmap) => {
         const data = [[37.782551, -122.445368], [37.782745, -122.444586]];
-        const regionInfographic = new RegionInfographic(data);
+        const regionmap = new Regionmap(data);
 
-        regionInfographic.setMap(myMap);
+        regionmap.setMap(myMap);
     });
 });

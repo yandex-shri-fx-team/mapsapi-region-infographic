@@ -98,25 +98,25 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-ymaps.modules.define('RegionInfographic', ['option.Manager', 'Monitor', 'Layer'], function (provide, OptionManager) {
-    var RegionInfographic = function () {
-        function RegionInfographic() {
-            _classCallCheck(this, RegionInfographic);
+ymaps.modules.define('Regionmap', ['option.Manager', 'Monitor', 'Layer'], function (provide, OptionManager) {
+    var Regionmap = function () {
+        function Regionmap() {
+            _classCallCheck(this, Regionmap);
         }
 
-        RegionInfographic.prototype.construcotor = function construcotor(data, options) {
+        Regionmap.prototype.construcotor = function construcotor(data, options) {
             this._data = data.map(_identity2.default);
             this.options = new OptionManager(options);
         };
 
-        RegionInfographic.prototype.setMap = function setMap(map) {
+        Regionmap.prototype.setMap = function setMap(map) {
             this._map = map;
         };
 
-        return RegionInfographic;
+        return Regionmap;
     }();
 
-    provide(RegionInfographic);
+    provide(Regionmap);
 });
 
 /***/ }),
@@ -139,11 +139,11 @@ ymaps.ready(function () {
         zoomControl: 'small'
     });
 
-    ymaps.modules.require(['RegionInfographic'], function (RegionInfographic) {
+    ymaps.modules.require(['Regionmap'], function (Regionmap) {
         var data = [[37.782551, -122.445368], [37.782745, -122.444586]];
-        var regionInfographic = new RegionInfographic(data);
+        var regionmap = new Regionmap(data);
 
-        regionInfographic.setMap(myMap);
+        regionmap.setMap(myMap);
     });
 });
 

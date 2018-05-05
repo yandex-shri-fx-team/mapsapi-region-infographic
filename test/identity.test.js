@@ -1,7 +1,7 @@
 import {describe, it} from 'mocha';
 import {expect} from 'chai';
 
-import identity from '../src/RegionInfographic/utils/identity';
+import identity from '../src/Regionmap/utils/identity';
 
 describe('identity', () => {
     it('should work', () => {

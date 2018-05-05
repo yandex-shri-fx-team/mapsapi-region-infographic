@@ -1,11 +1,11 @@
 import identity from './utils/identity';
 
-ymaps.modules.define('RegionInfographic', [
+ymaps.modules.define('Regionmap', [
     'option.Manager',
     'Monitor',
     'Layer'
 ], (provide, OptionManager) => {
-    class RegionInfographic {
+    class Regionmap {
         construcotor(data, options) {
             this._data = data.map(identity);
             this.options = new OptionManager(options);
@@ -16,5 +16,5 @@ ymaps.modules.define('RegionInfographic', [
         }
     }
 
-    provide(RegionInfographic);
+    provide(Regionmap);
 });

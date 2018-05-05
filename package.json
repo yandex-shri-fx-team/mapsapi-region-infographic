@@ -1,13 +1,13 @@
 {
-  "name": "mapsapi-region-infographic",
+  "name": "mapsapi-regionmap",
   "version": "0.0.1",
   "description": "Yandex.Maps API module for data visualization.",
   "keywords": [
     "yandex",
     "maps",
-    "region-infographic"
+    "regionmap"
   ],
-  "main": "umd/region-infographic.min.js",
+  "main": "umd/regionmap.min.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development --config webpack.development.js --open",
     "build": "npm run build-module && npm run build-examples",
@@ -47,12 +47,12 @@
   },
   "author": "",
   "license": "MIT",
-  "homepage": "https://github.com/yandex-shri-fx-team/mapsapi-region-infographic#readme",
+  "homepage": "https://github.com/yandex-shri-fx-team/mapsapi-regionmap#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yandex-shri-fx-team/mapsapi-region-infographic.git"
+    "url": "git+https://github.com/yandex-shri-fx-team/mapsapi-regionmap.git"
   },
   "bugs": {
-    "url": "https://github.com/yandex-shri-fx-team/mapsapi-region-infographic/issues"
+    "url": "https://github.com/yandex-shri-fx-team/mapsapi-regionmap/issues"
   }
 }

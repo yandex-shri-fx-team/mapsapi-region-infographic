@@ -1,8 +1,8 @@
 module.exports = {
     mode: 'production',
-    entry: './src/RegionInfographic/RegionInfographic.js',
+    entry: './src/Regionmap/Regionmap.js',
     output: {
-        filename: 'region-infographic.min.js',
+        filename: 'regionmap.min.js',
         path: __dirname + '/umd'
     },
     module: {
