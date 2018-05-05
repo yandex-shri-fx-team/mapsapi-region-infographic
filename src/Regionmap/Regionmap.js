@@ -1,13 +1,9 @@
-import identity from './utils/identity';
-
 ymaps.modules.define('Regionmap', [
-    'option.Manager',
-    'Monitor',
-    'Layer'
+    'option.Manager'
 ], (provide, OptionManager) => {
     class Regionmap {
         construcotor(data, options) {
-            this._data = data.map(identity);
+            this._data = data;
             this.options = new OptionManager(options);
         }
 
