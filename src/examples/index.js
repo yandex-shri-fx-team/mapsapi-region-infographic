@@ -14,7 +14,7 @@ ymaps.ready(() => {
 
     function init(data) {
         ymaps.modules.require(['Regionmap'], (Regionmap) => {
-            const regionmap = new Regionmap(data, {regionOptions: {region: 'TR'}});
+            const regionmap = new Regionmap(data, {regionOptions: {region: 'KZ'}});
 
             regionmap.setMap(myMap);
         });
