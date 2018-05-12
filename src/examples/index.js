@@ -1,4 +1,5 @@
-import './../Regionmap/Regionmap';
+import '../Regionmap/Regionmap';
+import hotels from './data/hotels-russia.geojson';
 
 ymaps.ready(() => {
     // eslint-disable-next-line no-unused-vars
@@ -11,10 +12,13 @@ ymaps.ready(() => {
         zoomControl: 'small'
     });
 
-    ymaps.modules.require(['Regionmap'], (Regionmap) => {
-        const data = [[37.782551, -122.445368], [37.782745, -122.444586]];
-        const regionmap = new Regionmap(data);
+    function init(data) {
+        ymaps.modules.require(['Regionmap'], (Regionmap) => {
+            const regionmap = new Regionmap(data, {regionOptions: {region: 'RU'}});
 
-        regionmap.setMap(myMap);
-    });
+            regionmap.setMap(myMap);
+        });
+    }
+
+    init(hotels);
 });
