@@ -1,22 +1,26 @@
 {
-  "extends": "loris/es6",
-  "root": true,
-  "env": {
-    "browser": true,
-    "es6": true,
-    "mocha": true
-  },
-  "globals": {
-    "ymaps": true
-  },
-  "rules": {
-    "strict": ["error", "never"],
-    "curly": [0, "multi"],
-    "no-console": ["error", { "allow": ["error"] }],
-    "no-implicit-globals": 0,
-    "no-cond-assign": 0
-  },
-  "parserOptions": {
-    "sourceType": "module"
-  }
+    "extends": "loris/es6",
+    "root": true,
+    "env": {
+        "browser": true,
+        "es6": true,
+        "mocha": true
+    },
+    "globals": {
+        "ymaps": true
+    },
+    "rules": {
+        "strict": ["error", "never"],
+        "curly": [0, "multi"],
+        "no-console": ["error", { "allow": ["error"] }],
+        "no-implicit-globals": 0,
+        "no-cond-assign": 0,
+        "object-shorthand": "error",
+        "valid-jsdoc": ["error", { "requireReturn": false }]
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "sourceType": "module"
+    }
 }
+
