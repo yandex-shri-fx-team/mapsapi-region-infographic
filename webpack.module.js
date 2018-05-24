@@ -1,6 +1,5 @@
 module.exports = {
-    mode: 'production',
-    entry: './src/Regionmap/Regionmap.js',
+    entry: './src/Regionmap.js',
     output: {
         filename: 'regionmap.min.js',
         path: __dirname + '/umd'
@@ -13,6 +12,17 @@ module.exports = {
                 use: {
                     loader: 'babel-loader'
                 }
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader'
+                    }
+                ]
             }
         ]
     }
