@@ -13,8 +13,9 @@
     "build": "npm run build-module && npm run build-examples",
     "build-module": "webpack --mode production --config webpack.module.js",
     "build-examples": "webpack --mode production --config webpack.examples.js",
-    "deploy": "gh-pages -d examples",
-    "lint": "eslint src/**/*.js"
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint src/**/*.js",
+    "test": "mocha -r babel-core/register test/{**/*,*}.test.js"
   },
   "husky": {
     "hooks": {
