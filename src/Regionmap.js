@@ -77,7 +77,8 @@ ymaps.modules.define('Regionmap', [
          * @private
          */
         _render(data) {
-            const polygonmap = new Polygonmap({polygons: data, points: this._data});
+            const options = this.options.getAll();
+            const polygonmap = new Polygonmap({polygons: data, points: this._data}, options);
 
             polygonmap.setMap(this.getMap());
         }
