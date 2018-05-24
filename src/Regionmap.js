@@ -1,4 +1,4 @@
-import 'mapsapi-polygonmap/src/Polygonmap/Polygonmap';
+import 'ymaps-polygonmap';
 
 ymaps.modules.define('Regionmap', [
     'option.Manager',
