@@ -1,5 +1,5 @@
 import '../../src/Regionmap';
-import data from './data/hotels-russia.geojson';
+import data from '../data/hotels-russia.geojson';
 
 ymaps.ready(() => {
     // eslint-disable-next-line no-unused-vars
