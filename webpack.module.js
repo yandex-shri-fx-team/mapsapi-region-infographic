@@ -1,5 +1,4 @@
 module.exports = {
-    mode: 'production',
     entry: './src/Regionmap.js',
     output: {
         filename: 'regionmap.min.js',

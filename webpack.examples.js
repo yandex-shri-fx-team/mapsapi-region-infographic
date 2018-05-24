@@ -1,8 +1,15 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const pages = [
+    'examples',
+    'examples/main'
+];
+
 module.exports = {
-    mode: 'production',
-    entry: './examples/index.js',
+    entry: pages.reduce((acc, path) => ({
+        ...acc,
+        [path]: `./${path}/index.${path === 'examples' ? 'html' : 'js'}`
+    }), {}),
     module: {
         rules: [
             {
@@ -21,19 +28,21 @@ module.exports = {
             {
                 test: /\.html$/,
                 exclude: /node_modules/,
-                use: [
-                    {
-                        loader: 'html-loader'
-                    }
-                ]
+                use: {
+                    loader: 'html-loader'
+                }
             }
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: 'examples/index.html',
-            filename: 'index.html'
-        })
+        ...pages.map((path) => {
+            return new HtmlWebpackPlugin({
+                chunks: [path],
+                template: `${path}/index.html`,
+                filename: path === 'examples' ?
+                    'index.html' :
+                    `${path.replace('examples/', '')}/index.html`
+            });
+        }, {})
     ]
 };
-
