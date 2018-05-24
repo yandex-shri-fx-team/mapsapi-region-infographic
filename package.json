@@ -1,5 +1,5 @@
 {
-  "name": "mapsapi-regionmap",
+  "name": "ymaps-regionmap",
   "version": "0.0.1",
   "description": "Yandex.Maps API module for data visualization.",
   "keywords": [
@@ -49,15 +49,15 @@
   },
   "author": "",
   "license": "MIT",
-  "homepage": "https://github.com/yandex-shri-fx-team/mapsapi-regionmap#readme",
+  "homepage": "https://github.com/yandex-shri-fx-team/ymaps-regionmap#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yandex-shri-fx-team/mapsapi-regionmap.git"
+    "url": "git+https://github.com/yandex-shri-fx-team/ymaps-regionmap.git"
   },
   "bugs": {
-    "url": "https://github.com/yandex-shri-fx-team/mapsapi-regionmap/issues"
+    "url": "https://github.com/yandex-shri-fx-team/ymaps-regionmap/issues"
   },
   "dependencies": {
-    "mapsapi-polygonmap": "git+https://github.com/yandex-shri-fx-team/mapsapi-polygonmap.git"
+    "ymaps-polygonmap": "git+https://github.com/yandex-shri-fx-team/ymaps-polygonmap.git"
   }
 }
