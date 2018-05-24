@@ -1,6 +1,6 @@
 module.exports = {
     mode: 'production',
-    entry: './src/Regionmap/Regionmap.js',
+    entry: './src/Regionmap.js',
     output: {
         filename: 'regionmap.min.js',
         path: __dirname + '/umd'
