@@ -6,8 +6,7 @@ const pages = [
 ];
 
 module.exports = {
-    entry: pages.reduce((acc, path) => ({
-        ...acc,
+    entry: pages.reduce((acc, path) => Object.assign(acc, {
         [path]: `./${path}/index.${path === 'examples' ? 'html' : 'js'}`
     }), {}),
     module: {
@@ -45,8 +44,8 @@ module.exports = {
             }
         ]
     },
-    plugins: [
-        ...pages.map((path) => {
+    plugins: [].concat(
+        pages.map((path) => {
             return new HtmlWebpackPlugin({
                 chunks: [path],
                 template: `${path}/index.html`,
@@ -54,6 +53,6 @@ module.exports = {
                     'index.html' :
                     `${path.replace('examples/', '')}/index.html`
             });
-        }, {})
-    ]
+        })
+    )
 };
