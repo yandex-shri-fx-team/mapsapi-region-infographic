@@ -15,15 +15,16 @@ ymaps.modules.define('Regionmap', [
      * @param {Object} [data] Points, GeoJSON FeatureCollections.
      * @param {Object} [options] Options for customization.
      * @param {function} options.mapper Function of iterative transformation of features.
-     * @param {string} [options.colorBy=points] Calculate the color by points | weight.
-     * @param {string} [options.colorByWeightProp=weight] Prop name in data object, for weight value.
-     * If colorBy is "weight".
-     * @param {string} [options.colorByWeightType=middle] Type of calculate color by weight. Can be middle | maximum
+     * @param {string} [options.fillBy=points] Calculate the color by points | weight.
+     * @param {string} [options.fillByWeightProp=weight] Prop name in data object, for weight value.
+     * If fillBy is "weight".
+     * @param {string} [options.fillByWeightType=middle] Type of calculate color by weight. Can be middle | maximum
      * @param {number|array} [options.colorRanges=3] Count of ranges or array of custom ranges.
      * @param {string|array} [options.colorScheme=[rgb(255, 90, 76), rgb(224, 194, 91), rgb(108, 206, 92)]]
      * Preset for colorize or array of custom colors.
-     * @param {number} [options.colorOpacity=1] Opacity of polygon.
-     * @param {string} [options.colorEmptyPolygon=rgba(255, 255, 255, 0)] Color of polygon where points count equal 0.
+     * @param {number} [options.fillOpacity=1] Opacity of polygon.
+     * @param {string} [options.fillColorEmptyPolygon=rgba(255, 255, 255, 0)] Color of polygon
+     * where points count equal 0.
      * @param {string} [options.strokeColor=#fff] Color of polygon stroke.
      * @param {number} [options.strokeWidth=2] Width of polygon stroke.
      * @param {boolean} [options.showLegend=true] Flag to show color legend.
@@ -37,9 +38,9 @@ ymaps.modules.define('Regionmap', [
      * @param {function} options.onClick Handler for click event.
      * @param {function} options.balloonContent Function for render content of baloon. Recieves object with
      * properties of polygon.
-     * @param {number} [options.opacityHover=0.9] Number of opacity on polygon hover.
+     * @param {number} [options.fillOpacityHover=0.9] Number of opacity on polygon hover.
      * @param {number} [options.strokeWidthHover=2] Number of stroke width on polygon hover.
-     * @param {number} [options.opacityActive=1] Number of opacity on polygon active.
+     * @param {number} [options.fillOpacityActive=1] Number of opacity on polygon active.
      * @param {number} [options.strokeWidthActive=3] Number of stroke width on polygon active.
      * @param {boolean} [options.interactivity=true] Flag for enable interactivity.
      * @param {object} options.regionOptions Options for Yandex.Maps API Regions.
