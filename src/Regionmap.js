@@ -14,16 +14,35 @@ ymaps.modules.define('Regionmap', [
     /**
      * @param {Object} [data] Points, GeoJSON FeatureCollections.
      * @param {Object} [options] Options for customization.
-     * @param {number|array} options.colorRanges count of ranges or array of custom ranges
-     * @param {string|array} options.colorScheme preset for colorize or array of custom colors
-     * @param {number} options.colorOpacity opacity of polygon
-     * @param {string} options.colorEmptyPolygon color of polygon where points count equal 0
-     * @param {string} options.strokeColor color for polygon stroke
-     * @param {number} options.strokeWidth width for polygon stroke
-     * @param {boolean} options.showLegend flag to show color legend
-     * @param {function} options.legendTemplate receives object {color: value} returns html legend template
-     * @param {object} options.legendPosition position of legend,
-     * you can only change the top or bottom and right or left
+     * @param {Object} [options] Options for customization.
+     * @param {function} options.mapper Function of iterative transformation of features.
+     * @param {string} [options.colorBy=points] Calculate the color by points | weight.
+     * @param {string} [options.colorByWeightProp=weight] Prop name in data object, for weight value.
+     * If colorBy is "weight".
+     * @param {string} [options.colorByWeightType=middle] Type of calculate color by weight. Can be middle | maximum
+     * @param {number|array} [options.colorRanges=3] Count of ranges or array of custom ranges.
+     * @param {string|array} [options.colorScheme=[rgb(255, 90, 76), rgb(224, 194, 91), rgb(108, 206, 92)]]
+     * Preset for colorize or array of custom colors.
+     * @param {number} [options.colorOpacity=1] Opacity of polygon.
+     * @param {string} [options.colorEmptyPolygon=rgba(255, 255, 255, 0)] Color of polygon where points count equal 0.
+     * @param {string} [options.strokeColor=#fff] Color of polygon stroke.
+     * @param {number} [options.strokeWidth=2] Width of polygon stroke.
+     * @param {boolean} [options.showLegend=true] Flag to show color legend.
+     * @param {function} options.legendTemplate Receives object {color: value} returns html legend template.
+     * @param {object} [options.legendPosition=top: 10, right: 10] Position of legend,
+     * you can only change the top or bottom and right or left.
+     * @param {function} [options.filter=undefined] Function for custom filter polygons with points.
+     * @param {boolean} [options.filterEmptyPolygons=false] Flag for show polygon with count of points equal 0.
+     * @param {function} options.onMouseEnter Handler for mouseEnter event.
+     * @param {function} options.onMouseLeave Handler for mouseLeave event.
+     * @param {function} options.onClick Handler for click event.
+     * @param {function} options.balloonContent Function for render content of baloon. Recieves object with
+     * properties of polygon.
+     * @param {number} [options.opacityHover=0.9] Number of opacity on polygon hover.
+     * @param {number} [options.strokeWidthHover=2] Number of stroke width on polygon hover.
+     * @param {number} [options.opacityActive=1] Number of opacity on polygon active.
+     * @param {number} [options.strokeWidthActive=3] Number of stroke width on polygon active.
+     * @param {boolean} [options.interactivity=true] Flag for enable interactivity.
      * @param {object} options.regionOptions Options for Yandex.Maps API Regions.
      * @alias module:Regionmap
      */

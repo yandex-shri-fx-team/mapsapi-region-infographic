@@ -16,7 +16,8 @@ ymaps.ready(() => {
         const regionmap = new Regionmap(data, {
             regionOptions: {
                 region: 'RU'
-            }
+            },
+            strokeColor: '#666'
         });
 
         regionmap.setMap(myMap);
