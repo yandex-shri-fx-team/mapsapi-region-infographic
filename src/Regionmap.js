@@ -14,7 +14,6 @@ ymaps.modules.define('Regionmap', [
     /**
      * @param {Object} [data] Points, GeoJSON FeatureCollections.
      * @param {Object} [options] Options for customization.
-     * @param {Object} [options] Options for customization.
      * @param {function} options.mapper Function of iterative transformation of features.
      * @param {string} [options.colorBy=points] Calculate the color by points | weight.
      * @param {string} [options.colorByWeightProp=weight] Prop name in data object, for weight value.
