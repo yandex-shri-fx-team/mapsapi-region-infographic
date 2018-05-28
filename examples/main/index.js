@@ -14,10 +14,10 @@ ymaps.ready(() => {
 
     ymaps.modules.require(['Regionmap'], (Regionmap) => {
         const regionmap = new Regionmap(data, {
+            colorEmptyPolygon: '#ccc',
             regionOptions: {
                 region: 'RU'
-            },
-            strokeColor: '#666'
+            }
         });
 
         regionmap.setMap(myMap);

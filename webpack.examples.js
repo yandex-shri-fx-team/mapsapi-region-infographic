@@ -2,7 +2,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const pages = [
     'examples',
-    'examples/main'
+    'examples/main',
+    'examples/dataset'
 ];
 
 module.exports = {
