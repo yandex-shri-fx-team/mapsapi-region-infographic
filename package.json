@@ -13,22 +13,19 @@
     "build": "npm run build-module && npm run build-examples",
     "build-module": "webpack --mode production --config webpack.module.js",
     "build-examples": "webpack --mode production --config webpack.examples.js",
-    "deploy": "gh-pages -d dist",
     "lint": "eslint src/**/*.js",
     "test": "nyc mocha -r babel-core/register src/**/*.test.js",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "docs": "jsdoc2md --template .jsdoc/README.md src/*.js > README.md"
+    "docs": "jsdoc2md --template .jsdoc/README.md src/*.js > README.md",
+    "deploy": "gh-pages -d dist",
+    "prerelease": "npm run deploy",
+    "release": "standard-version"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
       "commit-msg": "commitlint -e $GIT_PARAMS"
     }
-  },
-  "lint-staged": {
-    "**/*.js": [
-      "npm run lint"
-    ]
   },
   "devDependencies": {
     "@commitlint/cli": "^6.2.0",
@@ -52,6 +49,7 @@
     "lint-staged": "^7.1.0",
     "mocha": "^5.1.1",
     "nyc": "^11.8.0",
+    "standard-version": "^4.4.0",
     "style-loader": "^0.21.0",
     "webpack": "^4.8.2",
     "webpack-cli": "^2.1.3",
