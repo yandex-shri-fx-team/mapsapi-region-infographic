@@ -1,0 +1,26 @@
+# FILES
+.babelrc
+.codecov.yml
+.commitlintrc.yml
+.editorconfig
+.eslintignore
+.eslintrc
+.gitattributes
+.gitignore
+.lintstagedrc
+.travis.yml
+*.test.js
+
+npm-debug.log
+
+CHANGELOG.md
+CONTRIBUTING.md
+MAINTAINERS
+
+# DIRECTORIES
+docs
+test
+coverage
+node_modules
+umd
+examples
