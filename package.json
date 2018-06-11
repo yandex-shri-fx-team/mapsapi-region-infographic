@@ -66,6 +66,6 @@
     "url": "https://github.com/yandex-shri-fx-team/ymaps-regionmap/issues"
   },
   "dependencies": {
-    "ymaps-polygonmap": "git+https://github.com/yandex-shri-fx-team/ymaps-polygonmap.git"
+    "ymaps-polygonmap": "^1.0.1"
   }
 }
